@@ -26,8 +26,13 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <input name="password" type="password" class="form-control" id="exampleInputPassword1">
         </div>
+
+        @error('password')
+        <div id="emailHelp" class="form-text">Insira um password válida</div>
+        @enderror
+
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>

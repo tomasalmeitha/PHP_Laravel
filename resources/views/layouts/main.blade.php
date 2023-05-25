@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +34,10 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
+                    <li>
+                        <a href="{{ route('backoffice') }}">BackOffice</a>
+                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#">Features</a>
                     </li>
@@ -42,10 +47,12 @@
                     <li class="nav-item">
                         <a class="nav-link disabled">Disabled</a>
                     </li>
+
                 </ul>
             </div>
         </div>
         @if (Route::has('login'))
+    
         <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
             @auth
                 <a href="{{ url('/home') }}"

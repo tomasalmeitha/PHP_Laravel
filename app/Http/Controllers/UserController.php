@@ -109,11 +109,11 @@ class UserController extends Controller
     {
         $myUser = $request->all();
 
-        /* $request->validate([
+        $request->validate([
             'name' => 'required|string',
             'email' => 'required|email|unique:users',
             'password' => 'required',
-        ]); */
+        ]);
 
         User::insert([
             'name' => $request->name,

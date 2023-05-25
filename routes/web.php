@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,3 +90,6 @@ Route::get('/home_add_user',
 
 Route::post('/create_user',
     [UserController::class, 'createUser'])->name('create_user');
+
+Route::get('/dashboard',
+    [DashboardController::class, 'backoffice'])->name('backoffice');
